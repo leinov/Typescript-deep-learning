@@ -1,5 +1,6 @@
 // 1. 布尔型
-const bol: boolean = false;
+let isOk: boolean = true;
+let isNice: boolean = false;
 
 // 2. 字符串类型
 let str: string;
@@ -9,8 +10,9 @@ console.log(str);
 
 // 3. 数字类型
 let num1: number = 3; // 十进制
-let num2: number = 0xf002; // 十六进制
-
+let num2: number = 0xf00d; // 十六进制
+let num3: number = 0b1010; // 二进制
+let num4: number = 0o744; // 八进制
 // 4. 数组类型
 let arr1: string[] = ["beijing", "shanghai"]; // 形式1
 let arr2: Array<number> = [1, 2, 3]; // 形式2
@@ -20,12 +22,17 @@ let tuple: [string, number, boolean];
 tuple = ["hello", 2, false]; // 必须与上面定义的元祖类型数量一一对应
 
 // 6.枚举类型
-enum Res {
-    Success,
-    False,
+enum Day {
+    Sun,
+    Mon,
+    Tues,
+    Wed,
+    Thurs,
+    Fri,
+    Set,
 }
 // 默认从0开始为元素编号
-console.log(Res.Success); // 0
+console.log(Day.Fri); // 5
 
 // 手动赋值
 enum City {
@@ -41,7 +48,7 @@ if (City.BeiJing) {
 let anyone: any;
 anyone = 1;
 anyone = false;
-
+// anyone.ok();
 let arr3: any[];
 arr3 = [1, false, {name: "leinov"}];
 
@@ -57,26 +64,27 @@ let isNull: null = null;
 
 // 10. undefined类型
 let u: undefined;
-
+u = undefined;
 // 11 never类型
 // never类型表示的是那些永不存在的值的类型
 function error(msg: string): never {
     throw new Error(msg);
 }
-error("这是一个异常");
+// error("这是一个异常");
 
 function loop(): never {
     while (true) {
         console.log("没有终点");
     }
 }
-loop();
+// loop();
 
 // 12. object
 declare function create(o: object | null): void;
 let obj: object;
 obj = new Date();
-create({name: "leinov"});
+
+// create({name: "leinov"});
 
 // 类型断言
 // 1. as语法
