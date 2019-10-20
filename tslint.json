@@ -6,8 +6,10 @@
     "jsRules": {},
     "rules": {
         "no-console": false,
-        "array-type":false,
-        "no-angle-bracket-type-assertion":false
+        "array-type": false,
+        "no-angle-bracket-type-assertion": false,
+        "quotemark": false,
+        "object-literal-sort-keys": false
     },
     "rulesDirectory": []
 }
