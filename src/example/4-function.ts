@@ -63,3 +63,15 @@ function padding(top: number, right?: number, bottom?: number, left?: number): I
 padding(5);
 console.log(padding(5, 10));
 padding(1, 2, 3, 4);
+
+// this
+let person = {
+    name: "Brendan Eich",
+    hello(thing) {
+      console.log(this.name + " says hello " + thing);
+    },
+  };
+
+let boundHello = function(thing) { return person.hello.call(person, thing); };
+
+boundHello("world");
