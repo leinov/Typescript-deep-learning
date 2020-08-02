@@ -10,7 +10,8 @@
         "no-angle-bracket-type-assertion": false,
         "quotemark": false,
         "object-literal-sort-keys": false,
-        "only-arrow-functions": false
+        "only-arrow-functions": false,
+        "max-classes-per-file": false
     },
     "rulesDirectory": []
 }
